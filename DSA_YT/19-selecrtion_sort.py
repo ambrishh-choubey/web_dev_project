@@ -1,0 +1,14 @@
+
+def selection_sort(nums):
+    # nums=[5,7,8,9,4,2,5]
+    n=len(nums)
+    for i in range(n):
+        mini_ind=i
+        for j in range(i+1,n):
+            if nums[j]<nums[mini_ind]:
+                mini_ind=j
+        nums[i],nums[mini_ind]=nums[mini_ind],nums[i]
+        return nums
+        
+result=selection_sort([5,7,8,9,4,2,5])
+print(result)
